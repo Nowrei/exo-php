@@ -2,22 +2,21 @@
 $prenom = $_POST['prenom'];
 $nom = $_POST['nom'];
 $age = $_POST['age'];
-$message = $_POST['message'];
-print("<center>Bonjour $prenom $nom.<br> </center>
-<center>$message <br></center>");
+print("<center>Bonjour $prenom $nom.<br> </center>");
 
-$aujourdhui = date("Y-m-d");
-$diff = date_diff(date_create($_POST['age']), date_create($aujourdhui));
-  echo 'Vous avez '.$diff->format('%y').' ans';
-
-  if($diff->format('%y')< 18 ) {
-    header('location: https://www.gulli.fr/%27');
-}else {
-    header('location: https://www.amazon.com/%27');
-
-
-
-
+$diff = date_diff(date_create($date), date_create($aujourdhui));
+ echo('<br>Votre age est '. $diff->format('%y'). "ans");
+ $age = $diff->format('%y');
+ 
+ 
+ if($age >= 18) {
+    header('Location: https://www.amazon.fr/');
+    exit();
+ }
+else {
+    header('Location: https://us.teletubbies.com/');
+    exit();
+ } 
 
 
 ?>

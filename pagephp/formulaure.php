@@ -13,7 +13,6 @@
     Nom : <input type="text" name="nom" size="12"><br>
     Prénom : <input type="text" name="prenom" size="12"><br>
     Age : <input type="date" name="age" size="12"><br>
-    Message : <input type="text" name="message" size="12"><br>
     <input type="submit" value="OK">
 </form>
 </body>
